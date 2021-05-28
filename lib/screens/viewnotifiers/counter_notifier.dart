@@ -7,7 +7,6 @@ import 'package:daily_tracker/services/dialog_service.dart';
 import 'package:daily_tracker/services/firestore_service.dart';
 import 'package:daily_tracker/services/navigation_service.dart';
 import 'package:daily_tracker/models/dialog_models.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../locator.dart';
@@ -74,10 +73,8 @@ class CounterNotifier extends BaseNotifier {
         if (updatedStreaks.length > 0) {
           _streakList = updatedStreaks;
           try {
-            // print("selectedIndex: $_selectedIndex | streakList: ${streakList[0].streakDates.toString()}");
             selectedStreak = _streakList[_selectedIndex];
           } catch (e) {
-            // print("listenToStreaks error " + e.toString());
             selectedStreak = _streakList[0];
             _selectedIndex = 0;
           }
@@ -100,8 +97,6 @@ class CounterNotifier extends BaseNotifier {
 
   void markToday() async {
     setBusy(true);
-    // print("markToday ---------------------");
-    // print("selectedIndex: $selectedIndex | checked: $checked | selectedStreak.streakDates = ${selectedStreak.streakDates.toString()}");
     var result = false;
     try {
       result = checked

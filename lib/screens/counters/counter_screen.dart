@@ -1,10 +1,7 @@
 import 'package:daily_tracker/models/streak.dart';
 import 'package:daily_tracker/screens/counters/widgets/busy_checkbox.dart';
 import 'package:daily_tracker/screens/viewnotifiers/counter_notifier.dart';
-import 'package:daily_tracker/services/authentication_service.dart';
-import 'package:daily_tracker/services/dialog_service.dart';
 import 'package:daily_tracker/shared/ui_helpers.dart';
-import '../../locator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider_architecture/_viewmodel_provider.dart';
 import 'package:daily_tracker/shared/shared_styles.dart';

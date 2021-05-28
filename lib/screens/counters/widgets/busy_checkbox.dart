@@ -21,8 +21,6 @@ class _BusyCheckbox extends State<BusyCheckbox> {
       splashColor: NeonGreen,
       borderRadius: BorderRadius.circular(10),
       child: AnimatedContainer(
-          // height: widget.busy ? 50 : null,
-          // width: widget.busy ? 50 : null,
           duration: const Duration(milliseconds: 300),
           alignment: Alignment.center,
           child: Stack(

@@ -13,7 +13,6 @@ class AuthenticationService {
   final FirestoreService _firestoreService = locator<FirestoreService>();
 
   u.User _currentUser;
-  int _counter;
   u.User get currentUser => _currentUser;
 
   Future loginWithEmail(
@@ -68,25 +67,11 @@ class AuthenticationService {
   }
 
   Future addDateToUser(int index, Timestamp timestamp) async {
-    // if(_counter == null) {
-    //   _counter = 0;
-    //   print("_counter set to 0");
-    // }
-    // print("addDateToUser  -------- ");
-    // print("index: $index | streakList.length: ${_currentUser.streakList.toString()} | timestamp: $timestamp");
-    // print("-------------------counter: ${++_counter}");
     _currentUser.streakList[index].streakDates.add(timestamp);
     var result = await _firestoreService.updateStreakData(_currentUser);
     return result;
   }
   Future<bool> removeDateFromUser(int index, Timestamp timestamp) async {
-    // if(_counter == null) {
-    //   _counter = 0;
-    //   print("_counter set to 0");
-    // }
-    // print("removeDateFromUser -------- ");
-    // print("index: $index | streakList.length: ${_currentUser.streakList.toString()} | timestamp: $timestamp");
-    // print("----------------counter: ${++_counter}");
     _currentUser.streakList[index].streakDates.remove(timestamp);
     bool result = await _firestoreService.updateStreakData(_currentUser);
     return result;
