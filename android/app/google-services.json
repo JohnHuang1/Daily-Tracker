@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "997969281807",
+    "project_id": "daily-tracker-5dd85",
+    "storage_bucket": "daily-tracker-5dd85.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997969281807:android:8d3f9b6681841d8618b47a",
+        "android_client_info": {
+          "package_name": "com.example.daily_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997969281807-s6puttct8uca7oeucosatik8hffkkehc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBC42PULEstC6BTTb1VJjFA0dspYj25Ds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997969281807-s6puttct8uca7oeucosatik8hffkkehc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

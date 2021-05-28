@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_arrow">back arrow</string>
+    <string name="forward_arrow">forward arrow</string>
+    <string name="select_a_tracker">Select a Tracker</string>
+    <string name="done">Done</string>
+    <string name="check_image_button">Check image button</string>
+    <string name="preference_file_key">com.example.daily_tracker.PREFERENCE_FILE_KEY</string>
+</resources>
