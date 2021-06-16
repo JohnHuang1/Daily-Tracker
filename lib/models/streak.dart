@@ -79,6 +79,15 @@ class Streak {
     };
   }
 
+  Map<String, dynamic> toJsonWidgetData(){
+    return {
+      'name': name,
+      'prevHighestStreak': prevHighestStreak,
+      'currHighestStreak': currentStreak,
+      'checked': containsTodaysDate(this),
+    };
+  }
+
   static DateTime roundToDay(DateTime dateTime) {
     return DateTime(dateTime.year, dateTime.month, dateTime.day);
   }

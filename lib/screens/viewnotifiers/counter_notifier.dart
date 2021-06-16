@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:daily_tracker/const/routes.dart';
+import 'package:daily_tracker/models/IOSWidgetData.dart';
 import 'package:daily_tracker/models/streak.dart';
 import 'package:daily_tracker/screens/viewnotifiers/base_notifier.dart';
 import 'package:daily_tracker/services/authentication_service.dart';
@@ -8,6 +11,8 @@ import 'package:daily_tracker/services/firestore_service.dart';
 import 'package:daily_tracker/services/navigation_service.dart';
 import 'package:daily_tracker/models/dialog_models.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_widgetkit/flutter_widgetkit.dart';
+import 'dart:io' show Platform;
 
 import '../../locator.dart';
 
@@ -77,6 +82,10 @@ class CounterNotifier extends BaseNotifier {
           } catch (e) {
             selectedStreak = _streakList[0];
             _selectedIndex = 0;
+          }
+          if(Platform.isIOS){
+            WidgetKit.setItem('widgetData', jsonEncode(IOSWidgetData(_streakList)), 'group.com.dailytracker');
+            WidgetKit.reloadAllTimelines();
           }
           updateCheckbox();
         } else {
