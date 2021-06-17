@@ -24,7 +24,9 @@
 	<true/>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>ConfigurationIntent</string>
+		<string>SingleCounterIntent</string>
+		<string>SingleIntent</string>
+		<string>SingleTrackerIntent</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

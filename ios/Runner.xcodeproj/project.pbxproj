@@ -11,28 +11,38 @@
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		7D5C1F67266ACDED003589F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D5C1F66266ACDED003589F8 /* GoogleService-Info.plist */; };
-		7D5C1F6E266E7931003589F8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C1F6D266E7930003589F8 /* WidgetKit.framework */; };
-		7D5C1F70266E7931003589F8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C1F6F266E7931003589F8 /* SwiftUI.framework */; };
-		7D5C1F73266E7931003589F8 /* Counter_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1F72266E7931003589F8 /* Counter_Widget.swift */; };
-		7D5C1F76266E793A003589F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5C1F75266E793A003589F8 /* Assets.xcassets */; };
-		7D5C1F78266E793A003589F8 /* Counter_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1F74266E7931003589F8 /* Counter_Widget.intentdefinition */; };
-		7D5C1F79266E793A003589F8 /* Counter_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1F74266E7931003589F8 /* Counter_Widget.intentdefinition */; };
-		7D5C1F7C266E793A003589F8 /* Counter WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7D5C1F6C266E7930003589F8 /* Counter WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7D5C1F85267989A0003589F8 /* TrackerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1F84267989A0003589F8 /* TrackerItem.swift */; };
-		7D5C1F8626798C2D003589F8 /* TrackerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1F84267989A0003589F8 /* TrackerItem.swift */; };
+		7D5C1FD8267BB3AD003589F8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C1F6D266E7930003589F8 /* WidgetKit.framework */; };
+		7D5C1FD9267BB3AD003589F8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C1F6F266E7931003589F8 /* SwiftUI.framework */; };
+		7D5C1FDC267BB3AE003589F8 /* TrackWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1FDB267BB3AE003589F8 /* TrackWidget.swift */; };
+		7D5C1FDF267BB3B7003589F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5C1FDE267BB3B7003589F8 /* Assets.xcassets */; };
+		7D5C1FE1267BB3B7003589F8 /* TrackWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1FDD267BB3AE003589F8 /* TrackWidget.intentdefinition */; };
+		7D5C1FE2267BB3B7003589F8 /* TrackWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1FDD267BB3AE003589F8 /* TrackWidget.intentdefinition */; };
+		7D5C1FE5267BB3B7003589F8 /* TrackWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7D5C1FD7267BB3AD003589F8 /* TrackWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D5C1FEF267BB71D003589F8 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C1F8C267A57C5003589F8 /* Intents.framework */; };
+		7D5C1FF2267BB71D003589F8 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1FF1267BB71D003589F8 /* IntentHandler.swift */; };
+		7D5C1FF6267BB71D003589F8 /* TrackIntentsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7D5C1FEE267BB71D003589F8 /* TrackIntentsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D5C1FFD267BB7E7003589F8 /* TrackWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1FDD267BB3AE003589F8 /* TrackWidget.intentdefinition */; };
+		7D5C1FFE267BB7EA003589F8 /* TrackWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C1FDB267BB3AE003589F8 /* TrackWidget.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
-		B6F7B06F3D53BF3570E889BE /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35497B83EB776A9A7EDA9E93 /* Pods_Runner.framework */; };
+		C616BBC3150B878F5CF5623C /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC7942B2B6B5C86D3DAD78 /* Pods_Runner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7D5C1F7A266E793A003589F8 /* PBXContainerItemProxy */ = {
+		7D5C1FE3267BB3B7003589F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7D5C1F6B266E7930003589F8;
-			remoteInfo = "Counter WidgetExtension";
+			remoteGlobalIDString = 7D5C1FD6267BB3AD003589F8;
+			remoteInfo = TrackWidgetExtension;
+		};
+		7D5C1FF4267BB71D003589F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D5C1FED267BB71D003589F8;
+			remoteInfo = TrackIntentsExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -43,7 +53,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				7D5C1F7C266E793A003589F8 /* Counter WidgetExtension.appex in Embed App Extensions */,
+				7D5C1FF6267BB71D003589F8 /* TrackIntentsExtension.appex in Embed App Extensions */,
+				7D5C1FE5267BB3B7003589F8 /* TrackWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,26 +72,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0139DE6195930193D84E761C /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
-		35497B83EB776A9A7EDA9E93 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20AC7942B2B6B5C86D3DAD78 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B84D699E5D3B845738ECE6A /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		789D454CEDD764328FF08558 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
 		7D5C1F66266ACDED003589F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7D5C1F6C266E7930003589F8 /* Counter WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Counter WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5C1F6D266E7930003589F8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		7D5C1F6F266E7931003589F8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		7D5C1F72266E7931003589F8 /* Counter_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter_Widget.swift; sourceTree = "<group>"; };
-		7D5C1F74266E7931003589F8 /* Counter_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Counter_Widget.intentdefinition; sourceTree = "<group>"; };
-		7D5C1F75266E793A003589F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7D5C1F77266E793A003589F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D5C1F8226790AF3003589F8 /* Counter WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Counter WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		7D5C1F8326791CCF003589F8 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
-		7D5C1F84267989A0003589F8 /* TrackerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerItem.swift; sourceTree = "<group>"; };
+		7D5C1F8C267A57C5003589F8 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		7D5C1FB3267A7F98003589F8 /* TrackerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrackerWidgetExtension.entitlements; sourceTree = "<group>"; };
+		7D5C1FD7267BB3AD003589F8 /* TrackWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TrackWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5C1FDB267BB3AE003589F8 /* TrackWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackWidget.swift; sourceTree = "<group>"; };
+		7D5C1FDD267BB3AE003589F8 /* TrackWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TrackWidget.intentdefinition; sourceTree = "<group>"; };
+		7D5C1FDE267BB3B7003589F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D5C1FE0267BB3B7003589F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5C1FEE267BB71D003589F8 /* TrackIntentsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TrackIntentsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5C1FF1267BB71D003589F8 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		7D5C1FF3267BB71D003589F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5C1FFB267BB737003589F8 /* TrackWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrackWidgetExtension.entitlements; sourceTree = "<group>"; };
+		7D5C1FFC267BB743003589F8 /* TrackIntentsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrackIntentsExtension.entitlements; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
 		97C146EE1CF9000F007C117D /* Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,16 +103,25 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBAB1BAD3621A4CD9FA86F37 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		A2B6079E3C51F2D62566FA22 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		B3320C2ABE08CE3D905580F8 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7D5C1F69266E7930003589F8 /* Frameworks */ = {
+		7D5C1FD4267BB3AD003589F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5C1F70266E7931003589F8 /* SwiftUI.framework in Frameworks */,
-				7D5C1F6E266E7931003589F8 /* WidgetKit.framework in Frameworks */,
+				7D5C1FD9267BB3AD003589F8 /* SwiftUI.framework in Frameworks */,
+				7D5C1FD8267BB3AD003589F8 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5C1FEB267BB71D003589F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5C1FEF267BB71D003589F8 /* Intents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6F7B06F3D53BF3570E889BE /* Pods_Runner.framework in Frameworks */,
+				C616BBC3150B878F5CF5623C /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,23 +139,33 @@
 		14C184193D28D5BD06536CA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				35497B83EB776A9A7EDA9E93 /* Pods_Runner.framework */,
 				7D5C1F6D266E7930003589F8 /* WidgetKit.framework */,
 				7D5C1F6F266E7931003589F8 /* SwiftUI.framework */,
+				7D5C1F8C267A57C5003589F8 /* Intents.framework */,
+				20AC7942B2B6B5C86D3DAD78 /* Pods_Runner.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7D5C1F71266E7931003589F8 /* Counter Widget */ = {
+		7D5C1FDA267BB3AE003589F8 /* TrackWidget */ = {
 			isa = PBXGroup;
 			children = (
-				7D5C1F72266E7931003589F8 /* Counter_Widget.swift */,
-				7D5C1F74266E7931003589F8 /* Counter_Widget.intentdefinition */,
-				7D5C1F75266E793A003589F8 /* Assets.xcassets */,
-				7D5C1F77266E793A003589F8 /* Info.plist */,
-				7D5C1F84267989A0003589F8 /* TrackerItem.swift */,
+				7D5C1FDB267BB3AE003589F8 /* TrackWidget.swift */,
+				7D5C1FDD267BB3AE003589F8 /* TrackWidget.intentdefinition */,
+				7D5C1FDE267BB3B7003589F8 /* Assets.xcassets */,
+				7D5C1FE0267BB3B7003589F8 /* Info.plist */,
 			);
-			path = "Counter Widget";
+			path = TrackWidget;
+			sourceTree = "<group>";
+		};
+		7D5C1FF0267BB71D003589F8 /* TrackIntentsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				7D5C1FFC267BB743003589F8 /* TrackIntentsExtension.entitlements */,
+				7D5C1FF1267BB71D003589F8 /* IntentHandler.swift */,
+				7D5C1FF3267BB71D003589F8 /* Info.plist */,
+			);
+			path = TrackIntentsExtension;
 			sourceTree = "<group>";
 		};
 		9740EEB11CF90186004384FC /* Flutter */ = {
@@ -148,10 +182,12 @@
 		97C146E51CF9000F007C117D = {
 			isa = PBXGroup;
 			children = (
-				7D5C1F8226790AF3003589F8 /* Counter WidgetExtension.entitlements */,
+				7D5C1FFB267BB737003589F8 /* TrackWidgetExtension.entitlements */,
+				7D5C1FB3267A7F98003589F8 /* TrackerWidgetExtension.entitlements */,
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
-				7D5C1F71266E7931003589F8 /* Counter Widget */,
+				7D5C1FDA267BB3AE003589F8 /* TrackWidget */,
+				7D5C1FF0267BB71D003589F8 /* TrackIntentsExtension */,
 				97C146EF1CF9000F007C117D /* Products */,
 				CB2DBF0852E0C509BC9ACD65 /* Pods */,
 				14C184193D28D5BD06536CA9 /* Frameworks */,
@@ -162,7 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				97C146EE1CF9000F007C117D /* Runner.app */,
-				7D5C1F6C266E7930003589F8 /* Counter WidgetExtension.appex */,
+				7D5C1FD7267BB3AD003589F8 /* TrackWidgetExtension.appex */,
+				7D5C1FEE267BB71D003589F8 /* TrackIntentsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,9 +224,9 @@
 		CB2DBF0852E0C509BC9ACD65 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CBAB1BAD3621A4CD9FA86F37 /* Pods-Runner.debug.xcconfig */,
-				0139DE6195930193D84E761C /* Pods-Runner.release.xcconfig */,
-				789D454CEDD764328FF08558 /* Pods-Runner.profile.xcconfig */,
+				2B84D699E5D3B845738ECE6A /* Pods-Runner.debug.xcconfig */,
+				A2B6079E3C51F2D62566FA22 /* Pods-Runner.release.xcconfig */,
+				B3320C2ABE08CE3D905580F8 /* Pods-Runner.profile.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -197,41 +234,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D5C1F6B266E7930003589F8 /* Counter WidgetExtension */ = {
+		7D5C1FD6267BB3AD003589F8 /* TrackWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D5C1F81266E7949003589F8 /* Build configuration list for PBXNativeTarget "Counter WidgetExtension" */;
+			buildConfigurationList = 7D5C1FE6267BB3B7003589F8 /* Build configuration list for PBXNativeTarget "TrackWidgetExtension" */;
 			buildPhases = (
-				7D5C1F68266E7930003589F8 /* Sources */,
-				7D5C1F69266E7930003589F8 /* Frameworks */,
-				7D5C1F6A266E7930003589F8 /* Resources */,
+				7D5C1FD3267BB3AD003589F8 /* Sources */,
+				7D5C1FD4267BB3AD003589F8 /* Frameworks */,
+				7D5C1FD5267BB3AD003589F8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Counter WidgetExtension";
-			productName = "Counter WidgetExtension";
-			productReference = 7D5C1F6C266E7930003589F8 /* Counter WidgetExtension.appex */;
+			name = TrackWidgetExtension;
+			productName = TrackWidgetExtension;
+			productReference = 7D5C1FD7267BB3AD003589F8 /* TrackWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		7D5C1FED267BB71D003589F8 /* TrackIntentsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D5C1FF7267BB71D003589F8 /* Build configuration list for PBXNativeTarget "TrackIntentsExtension" */;
+			buildPhases = (
+				7D5C1FEA267BB71D003589F8 /* Sources */,
+				7D5C1FEB267BB71D003589F8 /* Frameworks */,
+				7D5C1FEC267BB71D003589F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrackIntentsExtension;
+			productName = TrackIntentsExtension;
+			productReference = 7D5C1FEE267BB71D003589F8 /* TrackIntentsExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		97C146ED1CF9000F007C117D /* Runner */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
-				44439214459CE5E8BE007001 /* [CP] Check Pods Manifest.lock */,
+				3E00923B7A2207713E5EE371 /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
-				EF57D946DA452B06866555D4 /* [CP] Embed Pods Frameworks */,
 				7D5C1F7D266E7949003589F8 /* Embed App Extensions */,
+				A550BA66BC3DCFD03CF9B984 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7D5C1F7B266E793A003589F8 /* PBXTargetDependency */,
+				7D5C1FE4267BB3B7003589F8 /* PBXTargetDependency */,
+				7D5C1FF5267BB71D003589F8 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -245,10 +300,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
-					7D5C1F6B266E7930003589F8 = {
+					7D5C1FD6267BB3AD003589F8 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					7D5C1FED267BB71D003589F8 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 					97C146ED1CF9000F007C117D = {
@@ -271,17 +329,25 @@
 			projectRoot = "";
 			targets = (
 				97C146ED1CF9000F007C117D /* Runner */,
-				7D5C1F6B266E7930003589F8 /* Counter WidgetExtension */,
+				7D5C1FD6267BB3AD003589F8 /* TrackWidgetExtension */,
+				7D5C1FED267BB71D003589F8 /* TrackIntentsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7D5C1F6A266E7930003589F8 /* Resources */ = {
+		7D5C1FD5267BB3AD003589F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5C1F76266E793A003589F8 /* Assets.xcassets in Resources */,
+				7D5C1FDF267BB3B7003589F8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5C1FEC267BB71D003589F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +380,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
 		};
-		44439214459CE5E8BE007001 /* [CP] Check Pods Manifest.lock */ = {
+		3E00923B7A2207713E5EE371 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,7 +416,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
 		};
-		EF57D946DA452B06866555D4 /* [CP] Embed Pods Frameworks */ = {
+		A550BA66BC3DCFD03CF9B984 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,13 +436,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7D5C1F68266E7930003589F8 /* Sources */ = {
+		7D5C1FD3267BB3AD003589F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5C1F8626798C2D003589F8 /* TrackerItem.swift in Sources */,
-				7D5C1F73266E7931003589F8 /* Counter_Widget.swift in Sources */,
-				7D5C1F78266E793A003589F8 /* Counter_Widget.intentdefinition in Sources */,
+				7D5C1FE1267BB3B7003589F8 /* TrackWidget.intentdefinition in Sources */,
+				7D5C1FDC267BB3AE003589F8 /* TrackWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5C1FEA267BB71D003589F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D5C1FFE267BB7EA003589F8 /* TrackWidget.swift in Sources */,
+				7D5C1FFD267BB7E7003589F8 /* TrackWidget.intentdefinition in Sources */,
+				7D5C1FF2267BB71D003589F8 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,20 +459,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5C1F79266E793A003589F8 /* Counter_Widget.intentdefinition in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
-				7D5C1F85267989A0003589F8 /* TrackerItem.swift in Sources */,
+				7D5C1FE2267BB3B7003589F8 /* TrackWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D5C1F7B266E793A003589F8 /* PBXTargetDependency */ = {
+		7D5C1FE4267BB3B7003589F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7D5C1F6B266E7930003589F8 /* Counter WidgetExtension */;
-			targetProxy = 7D5C1F7A266E793A003589F8 /* PBXContainerItemProxy */;
+			target = 7D5C1FD6267BB3AD003589F8 /* TrackWidgetExtension */;
+			targetProxy = 7D5C1FE3267BB3B7003589F8 /* PBXContainerItemProxy */;
+		};
+		7D5C1FF5267BB71D003589F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D5C1FED267BB71D003589F8 /* TrackIntentsExtension */;
+			targetProxy = 7D5C1FF4267BB71D003589F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -444,6 +523,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -462,7 +542,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INTENTS_CODEGEN_LANGUAGE = Swift;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
@@ -495,7 +576,7 @@
 			};
 			name = Profile;
 		};
-		7D5C1F7E266E7949003589F8 /* Debug */ = {
+		7D5C1FE7267BB3B7003589F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -504,13 +585,12 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = "Counter WidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = TrackWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZBAP248Q9;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Counter Widget/Info.plist";
+				INFOPLIST_FILE = TrackWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,7 +599,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.huang.john.dailyTracker.Counter-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huang.john.dailyTracker.TrackWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -529,7 +609,7 @@
 			};
 			name = Debug;
 		};
-		7D5C1F7F266E7949003589F8 /* Release */ = {
+		7D5C1FE8267BB3B7003589F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -538,13 +618,12 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = "Counter WidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = TrackWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZBAP248Q9;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Counter Widget/Info.plist";
+				INFOPLIST_FILE = TrackWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -552,7 +631,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.huang.john.dailyTracker.Counter-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huang.john.dailyTracker.TrackWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -560,7 +639,7 @@
 			};
 			name = Release;
 		};
-		7D5C1F80266E7949003589F8 /* Profile */ = {
+		7D5C1FE9267BB3B7003589F8 /* Profile */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -569,13 +648,12 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = "Counter WidgetExtension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = TrackWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZBAP248Q9;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Counter Widget/Info.plist";
+				INFOPLIST_FILE = TrackWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -583,7 +661,94 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.huang.john.dailyTracker.Counter-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huang.john.dailyTracker.TrackWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Profile;
+		};
+		7D5C1FF8267BB71D003589F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TrackIntentsExtension/TrackIntentsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZBAP248Q9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TrackIntentsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huang.john.dailyTracker.TrackIntentsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7D5C1FF9267BB71D003589F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TrackIntentsExtension/TrackIntentsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZBAP248Q9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TrackIntentsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huang.john.dailyTracker.TrackIntentsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7D5C1FFA267BB71D003589F8 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TrackIntentsExtension/TrackIntentsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ZBAP248Q9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TrackIntentsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huang.john.dailyTracker.TrackIntentsExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -614,6 +779,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -638,7 +804,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INTENTS_CODEGEN_LANGUAGE = Swift;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -669,6 +836,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -687,7 +855,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INTENTS_CODEGEN_LANGUAGE = Swift;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
@@ -750,12 +919,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7D5C1F81266E7949003589F8 /* Build configuration list for PBXNativeTarget "Counter WidgetExtension" */ = {
+		7D5C1FE6267BB3B7003589F8 /* Build configuration list for PBXNativeTarget "TrackWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D5C1F7E266E7949003589F8 /* Debug */,
-				7D5C1F7F266E7949003589F8 /* Release */,
-				7D5C1F80266E7949003589F8 /* Profile */,
+				7D5C1FE7267BB3B7003589F8 /* Debug */,
+				7D5C1FE8267BB3B7003589F8 /* Release */,
+				7D5C1FE9267BB3B7003589F8 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D5C1FF7267BB71D003589F8 /* Build configuration list for PBXNativeTarget "TrackIntentsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D5C1FF8267BB71D003589F8 /* Debug */,
+				7D5C1FF9267BB71D003589F8 /* Release */,
+				7D5C1FFA267BB71D003589F8 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

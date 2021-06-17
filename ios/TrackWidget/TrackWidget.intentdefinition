@@ -19,8 +19,6 @@
 		<dict>
 			<key>INIntentCategory</key>
 			<string>information</string>
-			<key>INIntentDescription</key>
-			<string>Your trackers at a glance.</string>
 			<key>INIntentDescriptionID</key>
 			<string>tVvJ9c</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -28,9 +26,9 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>5</integer>
+			<integer>3</integer>
 			<key>INIntentName</key>
-			<string>Configuration</string>
+			<string>SingleCounter</string>
 			<key>INIntentParameters</key>
 			<array>
 				<dict>
@@ -39,13 +37,13 @@
 					<key>INIntentParameterDisplayName</key>
 					<string>Tracker</string>
 					<key>INIntentParameterDisplayNameID</key>
-					<string>xP4odp</string>
+					<string>tJKcfy</string>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>1</integer>
 					<key>INIntentParameterName</key>
-					<string>Tracker</string>
+					<string>tracker</string>
 					<key>INIntentParameterObjectType</key>
-					<string>Type</string>
+					<string>Tracker</string>
 					<key>INIntentParameterObjectTypeNamespace</key>
 					<string>88xZPY</string>
 					<key>INIntentParameterPromptDialogs</key>
@@ -56,7 +54,7 @@
 							<key>INIntentParameterPromptDialogFormatString</key>
 							<string>Choose a tracker</string>
 							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>vrio2P</string>
+							<string>4JOty3</string>
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Configuration</string>
 						</dict>
@@ -70,9 +68,9 @@
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
 							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>There are ${count} options matching ‘${Tracker}’.</string>
+							<string>There are ${count} options matching ‘${tracker}’.</string>
 							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>7tRki3</string>
+							<string>myDtt7</string>
 							<key>INIntentParameterPromptDialogType</key>
 							<string>DisambiguationIntroduction</string>
 						</dict>
@@ -80,19 +78,17 @@
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
 							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Just to confirm, you wanted ‘${Tracker}’?</string>
+							<string>Just to confirm, you wanted ‘${tracker}’?</string>
 							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>Q2IuvG</string>
+							<string>iRsWU2</string>
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Confirmation</string>
 						</dict>
 					</array>
 					<key>INIntentParameterSupportsDynamicEnumeration</key>
 					<true/>
-					<key>INIntentParameterSupportsMultipleValues</key>
-					<true/>
 					<key>INIntentParameterTag</key>
-					<integer>5</integer>
+					<integer>3</integer>
 					<key>INIntentParameterType</key>
 					<string>Object</string>
 				</dict>
@@ -114,7 +110,7 @@
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>Trackers</string>
+			<string>Single Counter</string>
 			<key>INIntentTitleID</key>
 			<string>gpCwrM</string>
 			<key>INIntentType</key>
@@ -129,11 +125,11 @@
 			<key>INTypeDisplayName</key>
 			<string>Tracker</string>
 			<key>INTypeDisplayNameID</key>
-			<string>q6HNEV</string>
+			<string>Pj3mBZ</string>
 			<key>INTypeLastPropertyTag</key>
-			<integer>101</integer>
+			<integer>99</integer>
 			<key>INTypeName</key>
-			<string>Type</string>
+			<string>Tracker</string>
 			<key>INTypeProperties</key>
 			<array>
 				<dict>
@@ -185,31 +181,6 @@
 					<integer>4</integer>
 					<key>INTypePropertyType</key>
 					<string>SpeakableString</string>
-				</dict>
-				<dict>
-					<key>INTypePropertyDisplayName</key>
-					<string>checked</string>
-					<key>INTypePropertyDisplayNameID</key>
-					<string>aoSehJ</string>
-					<key>INTypePropertyDisplayPriority</key>
-					<integer>5</integer>
-					<key>INTypePropertyMetadata</key>
-					<dict>
-						<key>INTypePropertyMetadataFalseDisplayName</key>
-						<string>false</string>
-						<key>INTypePropertyMetadataFalseDisplayNameID</key>
-						<string>SpfdnX</string>
-						<key>INTypePropertyMetadataTrueDisplayName</key>
-						<string>true</string>
-						<key>INTypePropertyMetadataTrueDisplayNameID</key>
-						<string>HuDQNl</string>
-					</dict>
-					<key>INTypePropertyName</key>
-					<string>property</string>
-					<key>INTypePropertyTag</key>
-					<integer>101</integer>
-					<key>INTypePropertyType</key>
-					<string>Boolean</string>
 				</dict>
 			</array>
 		</dict>
