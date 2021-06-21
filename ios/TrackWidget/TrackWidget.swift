@@ -9,17 +9,6 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-struct FlutterWidgetData: Decodable, Hashable{
-    let streakList: [StreakItem]
-}
-
-struct StreakItem: Decodable, Hashable{
-    let name: String
-    let prevHighestStreak: Int
-    let currHighestStreak: Int
-    let checked: Bool
-}
-
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> TrackerEntry {
         print("--------------- placeholder called ---------------")
@@ -88,13 +77,35 @@ struct TrackerEntry: TimelineEntry {
 
 struct TrackWidgetEntryView : View {
     var entry: Provider.Entry
+    
+    @Environment(\.widgetFamily) var family
 
     var body: some View {
-        VStack{
-            Text(entry.date, style: .time)
-            Text(entry.streakItem.name)
-            Text(String(entry.streakItem.currHighestStreak))
-            Text(String(entry.streakItem.checked))
+        switch family{
+        case .systemSmall:
+            VStack(spacing: 5){
+                Color("widgetBackground")
+                Text(entry.streakItem.name).font(.title).truncationMode(.tail).lineLimit(1)
+                Image(entry.streakItem.checked ? "checkbox_48" : "checkbox_outline_48").resizable().frame(width: 100, height: 100).foregroundColor(Color("accent")).padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+            }
+        default:
+            VStack(spacing: 7){
+                Color("widgetBackground")
+                Text(entry.streakItem.name).font(.title).truncationMode(.tail).lineLimit(1).padding(EdgeInsets(top:0, leading: 0, bottom: -10, trailing: 0))
+                HStack(spacing: 20){
+                    VStack(alignment: .leading, spacing: 0){
+                        HStack{
+                            Text("Current Streak:").font(.headline)
+                            Text(String(entry.streakItem.currHighestStreak)).bold().foregroundColor(Color("accent")).font(.system(size: 30))
+                        }.padding(EdgeInsets(top:0, leading: 0, bottom: 10, trailing: 0))
+                        HStack{
+                            Text("Previous Highest:").font(.headline)
+                            Text(String(entry.streakItem.prevHighestStreak)).bold().foregroundColor(Color("accent")).font(.system(size: 30))
+                        }
+                    }
+                Image(entry.streakItem.checked ? "checkbox_48" : "checkbox_outline_48").resizable().frame(width: 120, height: 120).foregroundColor(Color("accent"))
+                }
+            }
         }
     }
 }
@@ -109,12 +120,17 @@ struct TrackWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 
 struct TrackWidget_Previews: PreviewProvider {
     static var previews: some View {
-        TrackWidgetEntryView(entry: TrackerEntry(date: Date(), configuration: SingleCounterIntent(), streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true)))
+        Group{
+            TrackWidgetEntryView(entry: TrackerEntry(date: Date(), configuration: SingleCounterIntent(), streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true)))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+            TrackWidgetEntryView(entry: TrackerEntry(date: Date(), configuration: SingleCounterIntent(), streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true)))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+        }
     }
 }
