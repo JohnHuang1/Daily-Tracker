@@ -13,7 +13,7 @@ class IOSWidgetData{
 
     return {
       "streakList": str,
-      "lastUpdated": lastUpdated.toIso8601String()
+      "lastUpdated": lastUpdated.toString()
     };
   }
 }
