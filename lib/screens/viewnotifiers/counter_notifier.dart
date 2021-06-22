@@ -84,7 +84,9 @@ class CounterNotifier extends BaseNotifier {
             _selectedIndex = 0;
           }
           if(Platform.isIOS){
-            WidgetKit.setItem('widgetData', jsonEncode(IOSWidgetData(_streakList)), 'group.com.dailytracker');
+            String json = jsonEncode(IOSWidgetData(_streakList, DateTime.now()));
+            print("----JSON DATA: " + json);
+            WidgetKit.setItem('widgetData', json, 'group.com.dailytracker');
             WidgetKit.reloadAllTimelines();
           }
           updateCheckbox();
@@ -119,7 +121,9 @@ class CounterNotifier extends BaseNotifier {
           description:
               "Something went wrong. Try refreshing.");
     }
-    print("android call: --- " + await platform.invokeMethod("updateWidgets", selectedIndex));
+    if(Platform.isAndroid){
+      print("android call: --- " + await platform.invokeMethod("updateWidgets", selectedIndex));
+    }
     setBusy(false);
 
     if (!(result is bool)) {
@@ -153,3 +157,4 @@ class CounterNotifier extends BaseNotifier {
     }
   }
 }
+
