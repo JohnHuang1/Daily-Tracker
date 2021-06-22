@@ -83,9 +83,9 @@ class CounterNotifier extends BaseNotifier {
             selectedStreak = _streakList[0];
             _selectedIndex = 0;
           }
+          String json = jsonEncode(IOSWidgetData(_streakList, DateTime.now()));
+          print("----JSON DATA: " + json);
           if(Platform.isIOS){
-            String json = jsonEncode(IOSWidgetData(_streakList, DateTime.now()));
-            print("----JSON DATA: " + json);
             WidgetKit.setItem('widgetData', json, 'group.com.dailytracker');
             WidgetKit.reloadAllTimelines();
           }
