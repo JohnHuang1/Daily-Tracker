@@ -8,12 +8,13 @@
 import Foundation
 
 struct FlutterWidgetData: Decodable, Hashable{
-    let streakList: [StreakItem]
+    var streakList: [StreakItem]
+    let lastUpdated: Date
 }
 
 struct StreakItem: Decodable, Hashable{
     let name: String
-    let prevHighestStreak: Int
-    let currHighestStreak: Int
-    let checked: Bool
+    var prevHighestStreak: Int
+    var currHighestStreak: Int
+    var checked: Bool
 }

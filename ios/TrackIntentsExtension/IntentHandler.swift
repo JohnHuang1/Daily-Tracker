@@ -20,6 +20,9 @@ class IntentHandler: INExtension {
 }
 
 extension IntentHandler: SingleCounterIntentHandling{
+    enum DateError: String, Error {
+        case invalidDate
+    }
     func provideTrackerOptionsCollection(for intent: SingleCounterIntent, with completion: @escaping (INObjectCollection<Tracker>?, Error?) -> Void) {
         print("------- provideTrackerOptionsCollection called ----------")
         let sharedDefaults = UserDefaults.init(suiteName: "group.com.dailytracker")
@@ -32,11 +35,25 @@ extension IntentHandler: SingleCounterIntentHandling{
                 let shared = sharedDefaults?.string(forKey: "widgetData")
                 if(shared != nil){
                     let decoder = JSONDecoder()
+//                    decoder.dateDecodingStrategy = .iso8601
+                    let formatter = DateFormatter()
+                    formatter.calendar = Calendar(identifier: .iso8601)
+                    formatter.locale = Locale(identifier: "en_US_POSIX")
+                    formatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+                    decoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
+                        let container = try decoder.singleValueContainer()
+                        let dateStr = try container.decode(String.self)
+
+                        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+                        if let date = formatter.date(from: dateStr) {
+                            return date
+                        }
+                        throw DateError.invalidDate
+                    })
+                    
                     flutterData = try decoder.decode(FlutterWidgetData.self, from: shared!.data(using: .utf8)!)
                     print("Flutter data decoded----------------------")
-                    flutterData?.streakList.forEach{ item in
-                        print("\t------Item: " + item.name + " " + String(item.checked))
-                    }
                 } else {
                     print("Shared nil----------------------------")
                 }
@@ -53,11 +70,11 @@ extension IntentHandler: SingleCounterIntentHandling{
             print("Shared Defaults nil--------------------------------")
         }
         print("items.isEmpty = " + String(items.isEmpty))
-        let collection = INObjectCollection(items: !items.isEmpty ? items : [Tracker(identifier: "0", display: "Defaultt")] )
+        let collection = INObjectCollection(items: !items.isEmpty ? items : [Tracker(identifier: "0", display: "Default")] )
         print("--------- collection set --------------- ")
         completion(collection, nil)
     }
     func defaultTracker(for intent: SingleCounterIntent) -> Tracker? {
-        return Tracker(identifier: "-1", display: "Default2")
+        return Tracker(identifier: "0", display: "Default")
     }
 }

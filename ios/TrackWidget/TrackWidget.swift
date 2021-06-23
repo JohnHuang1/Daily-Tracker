@@ -10,14 +10,17 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
+    enum DateError: String, Error {
+        case invalidDate
+    }
     func placeholder(in context: Context) -> TrackerEntry {
         print("--------------- placeholder called ---------------")
-        return TrackerEntry(date: Date(), configuration: SingleCounterIntent(), streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true))
+        return TrackerEntry(date: Date(), lastUpdated: Date(), configuration: SingleCounterIntent(), streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true))
     }
 
     func getSnapshot(for configuration: SingleCounterIntent, in context: Context, completion: @escaping (TrackerEntry) -> ()) {
         print("--------------- getSnapshot called ---------------")
-        let entry = TrackerEntry(date: Date(), configuration: configuration, streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true))
+        let entry = TrackerEntry(date: Date(), lastUpdated: Date(),  configuration: configuration, streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true))
         completion(entry)
     }
 
@@ -38,11 +41,29 @@ struct Provider: IntentTimelineProvider {
                 print("shared = " + (shared ?? "nil"))
                 if(shared != nil){
                     let decoder = JSONDecoder()
+//                    decoder.dateDecodingStrategy = .iso8601
+                    let formatter = DateFormatter()
+                    formatter.calendar = Calendar(identifier: .iso8601)
+                    formatter.locale = Locale(identifier: "en_US_POSIX")
+                    formatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+                    decoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
+                        let container = try decoder.singleValueContainer()
+                        let dateStr = try container.decode(String.self)
+
+                        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+                        if let date = formatter.date(from: dateStr) {
+                            return date
+                        }
+                        throw DateError.invalidDate
+                    })
+                    
                     flutterData = try decoder.decode(FlutterWidgetData.self, from: shared!.data(using: .utf8)!)
                     print("Flutter data decoded----------------------")
-                    flutterData?.streakList.forEach{ item in
-                        print("\t------Item: " + item.name + " " + String(item.checked))
-                    }
+                    let format = DateFormatter()
+                    format.dateFormat = "YY, MMM d, HH:mm:ss"
+                    print("lastUpdated: " + format.string(from: flutterData!.lastUpdated))
+                    print("Date(): " + format.string(from: Date()))
                 } else {
                     print("Shared nil----------------------------")
                 }
@@ -53,13 +74,29 @@ struct Provider: IntentTimelineProvider {
         } else {
             print("Shared Defaults nil--------------------------------")
         }
-        print("flutterData.streakList.isEmpty = " + String(flutterData!.streakList.isEmpty))
+        if flutterData != nil {
+            print("flutterData.streakList.isEmpty = " + String(flutterData!.streakList.isEmpty))
+            let updated = Calendar.current.compare(flutterData!.lastUpdated, to: Date(), toGranularity: .day)
+            if updated == .orderedAscending {
+                print("updated == .orderedAscending true ---------")
+                if flutterData!.streakList[index!].checked == false || Calendar.current.compare(Calendar.current.date(byAdding: .day, value: 1, to: flutterData!.lastUpdated)!, to: Date(), toGranularity: .day) == .orderedAscending {
+                    print("reset streaks reached---------------- ")
+                    let curr = flutterData!.streakList[index!].currHighestStreak
+                    let prev = flutterData!.streakList[index!].prevHighestStreak
+                    if curr > prev {
+                        flutterData!.streakList[index!].prevHighestStreak = curr
+                    }
+                    flutterData!.streakList[index!].currHighestStreak = 0
+                }
+                flutterData!.streakList[index!].checked = false
+            }
+        }
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
+        for hourOffset in 0 ..< 26{
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = TrackerEntry(date: entryDate, configuration: configuration, streakItem: flutterData!.streakList[index!])
+            let entry = TrackerEntry(date: entryDate, lastUpdated: flutterData!.lastUpdated, configuration: configuration, streakItem: flutterData!.streakList[index!])
             
             entries.append(entry)
         }
@@ -71,6 +108,7 @@ struct Provider: IntentTimelineProvider {
 
 struct TrackerEntry: TimelineEntry {
     let date: Date
+    let lastUpdated: Date
     let configuration: SingleCounterIntent
     let streakItem: StreakItem
 }
@@ -87,6 +125,7 @@ struct TrackWidgetEntryView : View {
                 Color("widgetBackground")
                 Text(entry.streakItem.name).font(.title).truncationMode(.tail).lineLimit(1)
                 Image(entry.streakItem.checked ? "checkbox_48" : "checkbox_outline_48").resizable().frame(width: 100, height: 100).foregroundColor(Color("accent")).padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+                Text(DateFormatter().string(from: entry.lastUpdated)).padding(EdgeInsets(top: -30, leading: 0, bottom: 10, trailing: 0))
             }
         default:
             VStack(spacing: 7){
@@ -127,9 +166,9 @@ struct TrackWidget: Widget {
 struct TrackWidget_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            TrackWidgetEntryView(entry: TrackerEntry(date: Date(), configuration: SingleCounterIntent(), streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true)))
+            TrackWidgetEntryView(entry: TrackerEntry(date: Date(),lastUpdated: Date(), configuration: SingleCounterIntent(), streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true)))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-            TrackWidgetEntryView(entry: TrackerEntry(date: Date(), configuration: SingleCounterIntent(), streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true)))
+            TrackWidgetEntryView(entry: TrackerEntry(date: Date(),lastUpdated: Date(), configuration: SingleCounterIntent(), streakItem: StreakItem(name: "Default", prevHighestStreak: 0, currHighestStreak: 0, checked: true)))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
         }
     }
